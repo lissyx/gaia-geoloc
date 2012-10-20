@@ -2,7 +2,13 @@ var watchId = undefined;
 
 function success(position) {
   var s = document.querySelector('#log');
-  s.innerHTML += "Latitude: " + position.coords.latitude + "; Longitude: " + position.coords.longitude + "<br />";
+  s.innerHTML += "************<br />";
+  for (var i in position.coords) {
+    var e = position.coords[i];
+    if (typeof e == 'number') {
+      s.innerHTML += i + ":" + position.coords[i] + "<br />";
+    }
+  }
 }
 
 function error(msg) {
