@@ -10,6 +10,8 @@ function success(position) {
       s.innerHTML = i + ":" + position.coords[i] + "<br />" + s.innerHTML;
     }
   }
+  var link = '<a href="http://www.openstreetmap.org/?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&zoom=16">Show on map</a><br />';
+  s.innerHTML = link + s.innerHTML;
 }
 
 function error(msg) {
