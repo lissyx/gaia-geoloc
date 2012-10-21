@@ -3,19 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="pragma" content="no-cache" />
-    <title>Heart Rate</title>
+    <title>Geolocation Debug</title>
+    <link rel="stylesheet" type="text/css" href="style/geoloc.css" />
+    <link rel="stylesheet" type="text/css" href="shared/style/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="shared/style/headers.css" />
     <script type="application/javascript" src="js/geoloc.js"></script>
   </head>
   <body role="application">
     <section role="region">
       <header>
-        <h1>GeoLocation</h1>
+        <h1>Geolocation test</h1>
       </header>
-      <button onclick="startGeoloc();">Start</button>
-      <button onclick="stopGeoloc();">Stop</button>
-      <button onclick="clearGeoloc();">Clear</button>
-      <p>Messages:</p>
-      <span id="log"></span>
+    </section>
+    <section role="region">
+      <div class="bb-docs">
+        <button onclick="startGeoloc();" id="btnStart">Start</button>
+        <button onclick="stopGeoloc();" id="btnStop">Stop</button>
+        <button onclick="clearGeoloc();" id="btnClear">Clear</button>
+	<br />
+        <span id="log"></span>
+      </div>
     </section>
   </body>
 </html>
